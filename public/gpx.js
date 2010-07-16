@@ -48,7 +48,7 @@ $(document).ready(function() {
 		$('#options li').removeClass('current');
 		$(this).parent().addClass('current');
 		
-		$.get('data/' + $(this).text(), null, function(data) {
+		$.get($(this).text(), null, function(data) {
 			var xml = $(data);
 			current_gpx.name = xml.find('name').html();
 			current_gpx.points = [];
